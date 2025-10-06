@@ -1,0 +1,23 @@
+{
+  "name": "documentation_assignment",
+  "version": "1.0.0",
+  "description": "A documentation website of what I've learnt so far in Node.JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "documentation",
+    "notes",
+    "frontend",
+    "backend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

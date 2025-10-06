@@ -1,0 +1,196 @@
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f4f4f4;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: #1f1f1f;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #e09f3e;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+    position: relative;
+  }
+  
+  nav ul li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  nav ul li a:hover {
+    color: #e09f3e;
+  }
+
+  /* Hero */ 
+  .hero {
+    background: url('/forside/images/cover_billede.png') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    }
+
+  .hero h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #FFBD59;
+  }
+
+  .hero p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  /* Drop-down menu */
+  .dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    z-index: 1000;
+  }
+  
+  .dropdown_menu li a {
+    display: block;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  .dropdown_menu li a:hover {
+    background-color: #e09f3e;
+    color: #1f1f1f;
+  }
+  
+  .dropdown:hover .dropdown_menu {
+    display: block;
+  }
+  
+  /* Søgefelt */
+  .search-box {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 4rem;
+  }
+  
+  .search-box input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 60%;
+    max-width: 400px;
+    font-weight: 500;
+  }
+  
+  .search-box button {
+    border-radius: 0 8px 8px 0;
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(135deg, #d4813f, #e09f3e);
+    border: none;
+    color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-box button:hover {
+    background: linear-gradient(135deg, #e09f3e, #f0b454);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(224, 159, 62, 0.3);
+  }
+  
+  /* Notes Section */
+  .notes_section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+  }
+  
+  .note {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  .note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .note h2 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #e09f3e;
+  }
+  
+  .note time,
+  .note p {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #c9a961;
+    margin-bottom: 0.5rem;
+  }
+  
+  .note a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e09f3e;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .note a:hover {
+    background-color: #f0b454;
+  }
