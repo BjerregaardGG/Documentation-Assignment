@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
     res.sendFile(path.resolve("public/forside/index.html"))
 });
 
+app.get("/lektion_1.html", (req, res) => {
+    res.sendFile(path.resolve("public/lektion_1/lektion_1.html"))
+})
+
 
 const PORT = 8080; 
 app.listen(PORT, () => {

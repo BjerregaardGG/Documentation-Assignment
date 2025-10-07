@@ -1,0 +1,175 @@
+/* === BODY & BASE === */
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e8e8e8;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  }
+  main {
+  flex: 1;
+  margin-top: 2rem;
+  }
+  .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  }
+  /* === HEADER === */
+  header {
+  background-color: #1f1f1f;
+  padding: 1.5rem 0;
+  text-align: center;
+  }
+  header h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #e09f3e;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  }
+  nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  }
+  nav ul li {
+  margin: 0 15px;
+  position: relative;
+  }
+  nav ul li a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #f4f4f4;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  letter-spacing: 0.3px;
+  }
+  nav ul li a:hover {
+  color: #e09f3e;
+  }
+  /* Drop-down menu */
+  .dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1f1f1f;
+  border-radius: 5px;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .dropdown_menu li a {
+  display: block;
+  padding: 0.7rem 2rem;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  }
+  .dropdown_menu li a:hover {
+  background-color: #e09f3e;
+  color: #1f1f1f;
+  }
+  .dropdown:hover .dropdown_menu {
+  display: block;
+  }
+  /* === NOTER OG BILLEDER === */
+  .notes {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  }
+  /* Note sektion */
+  .note {
+  margin-bottom: 2.5rem;
+  }
+  .note h2 {
+  color: #e09f3e;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.3px;
+  }
+  .note p {
+  margin-bottom: 0.8rem;
+  color: #d4d4d4;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 400;
+  }
+  .note ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  }
+  .note ul li {
+  margin-bottom: 0.5rem;
+  color: #d0d0d0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  }
+  .note h4 {
+  color: #f0b04e;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  }
+  /* Knap til at vise billede */
+  .vis-billede-knap {
+  background-color: transparent;
+  border: 1.5px solid #e09f3e;
+  color: #e09f3e;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  }
+  .vis-billede-knap:hover {
+  background-color: #e09f3e;
+  color: #121212;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(224, 159, 62, 0.3);
+  }
+  /* Billeder under noten */
+  .note img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+  /* Responsivt layout */
+  @media (max-width: 900px) {
+  main {
+  flex-direction: column;
+   }
+  .notes {
+  width: 90%;
+   }
+  header h1 {
+  font-size: 1.8rem;
+   }
+  .note h3 {
+  font-size: 1.3rem;
+   }
+  .note p, .note ul li {
+  font-size: 1rem;
+   }
+  }
