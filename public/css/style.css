@@ -109,14 +109,23 @@ body {
   font-weight: 400;
   }
   .note ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
+    list-style: none;      
+    padding-left: 1rem;  
   }
+  
   .note ul li {
-  margin-bottom: 0.5rem;
-  color: #d0d0d0;
-  font-size: 1.02rem;
-  line-height: 1.7;
+    position: relative;     
+    padding-left: 2rem;   
+  }
+  
+  .note ul li::before {
+    font-size: 1.2rem;
+    content: "‣";           
+    color: #e09f3e;
+    position: absolute;
+    left: 0;                
+    top: 0;
+    line-height: 1.7;       
   }
   .note h4 {
   color: #f0b04e;

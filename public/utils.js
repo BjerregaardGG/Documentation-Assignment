@@ -165,6 +165,18 @@ export function addNotesToHTML(noter, divClass = ".notes"){
             section.appendChild(unorderedList); 
         };
 
+        if (note.billedeVis) {
+            const billede = document.createElement("img"); 
+            billede.src = note.billedeVis; 
+                    
+            billede.style.marginTop = "1rem"; 
+            billede.style.display = "block"; 
+            billede.style.width = "100%";
+            billede.style.maxWidth = "870px";
+            
+            section.appendChild(billede);
+        };
+
         // Hvis note indeholder et billede
         if (note.billede) {
             const button = document.createElement("button");
