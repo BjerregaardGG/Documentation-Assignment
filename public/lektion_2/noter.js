@@ -14,7 +14,13 @@ export const noter = [
     { titel: "package.json & Set Up Tutorial", billede: "lektion_2/images/package_json1.png",  deklerationer: [
         { dek: "npm init", beskrivelse: "Vi kan oprette et projekt ved at bruge ovenstående kommando i terminalen. Efterfølgende vil vi blive bedt om at udfylde en række spørgsmål, så vi kan initialisere projektet og derefter vil der automatisk oprettes en package.json fil. Der vil samtidig oprettes en 'package-lock.json, der fortæller os præcis hvilke pakker der er installeret. Dette afhjælper problematikken: 'Works on my machine, not on yours'." }], 
         beskrivelse: "package.json indeholder dependencies og metadata for et projekt. Vi arbejder eksempelvis med webframeworket Express, hvilket vi specificerer i denne fil. I package.json kan vi også opsætte scripts til b.la. udviklings- og produktionsmiljøer. Det er også i package.json at vi kan specificerer om vi arbejder med ES moduler gennem (type: 'module'). Nendenfor er en tutorial til hvordan man ved hjælp af npm init kan oprette en package.json fil." },
-    { titel: "Express Server", beskrivelse: "Vi kan oprette en express server på to måder. Enten gennem common.js, hvor vi gør brug af require() og module.exports eller vha. ES moduler, hvor vi anvender import og export. Dette kræver at vi har type: module i vores package.json, som specificeret ovenfor." },
-    { titel: "Send data with Get Requests over HTTP", },
-    { titel: "Node Modules ", }
+    { titel: "Express Server", deklerationer: [
+        { dek: "common.js", beskrivelse: "common.js er 'the old school way' i forhold til at arbejde med express servers. Her anvender vi os af require().", billede: "lektion_2/images/commonjs.png" },
+        { dek: "ES moduler", beskrivelse: "ES moduler anvender sig af import og export, ligesom når vi anvender moduler i vores frontend, hvilket gør koden mere læsbar.", billede: "lektion_2/images/moduler.png" }], 
+        beskrivelse: "Vi kan oprette en express server på to måder. Enten gennem common.js, hvor vi gør brug af require() og module.exports eller vha. ES moduler, hvor vi anvender import og export. Dette kræver at vi har type: module i vores package.json, som specificeret ovenfor." },
+    { titel: "Send data with Get Requests over HTTP", deklerationer: [
+        { dek: "Query String", billede: "lektion_2/images/query.png", beskrivelse: "" },
+        { dek: "Path Variable", billede: "lektion_2/images/path.png", beskrivelse: "" }], 
+        beskrivelse: "Normalt vil man associerer det at sende data med en HTTP POST, men vi kan med HTTP GET faktisk sende data vha:" },
+    { titel: "node_modules", beskrivelse: "node_modules indeholder de biblioteker, som er downloadet gennem Node Package Manager (NPM). Mappen oprettes når vi kører 'npm install' kommandoen. node_modules indeholder filerne fra pakkeversionerne der er installeret, og package-lock.json er så med til at sikre, at når andre udviklere tilgår ens projekt, så arbejder man ud fra de samme versioner. node_modules pusher vi derfor aldrig til git, men i stedet package.json og package-lock.json. Når ens projekt klones, så kan udvikleren vha. npm install installere mappen og derved også alle bibliotekerne specificeret i node_modules."}
 ];

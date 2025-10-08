@@ -71,11 +71,13 @@ export function addHeaderToHTML(){
     header.appendChild(div);
 };
 
+// funktion til at tilføje footer
 export function addFooterToHTML(){
     const årstal = document.getElementById("copyright-year");
     årstal.innerText = new Date().getFullYear();
 };
 
+// funktion der tilføjer noter (lavet i et array bestående af js objekter) til html
 export function addNotesToHTML(noter, divClass = ".notes"){
     const notesDiv = document.querySelector(divClass); 
     
@@ -83,6 +85,7 @@ export function addNotesToHTML(noter, divClass = ".notes"){
         return; 
     }; 
 
+    // opretter dynamisk html elementer for hver note
     noter.forEach(note => {
         const section = document.createElement("section"); 
         section.className = "note"; 
@@ -125,14 +128,44 @@ export function addNotesToHTML(noter, divClass = ".notes"){
                 beskrivelse.innerText = dekleration.beskrivelse; 
 
                 punkt.appendChild(titel);
-                punkt.appendChild(beskrivelse); 
+                punkt.appendChild(beskrivelse);
+
+                // hvis deklerationer har et billede, så tilføj funktionalitet
+                if (dekleration.billede) {
+                    const button = document.createElement("button");
+                    button.innerText = `vis ${dekleration.dek} eksempel`;
+                    button.className = "vis-billede-knap";
+
+                    let billede = null; 
+  
+                    button.addEventListener("click", () => {
+                        if (!billede) {
+                            billede = document.createElement("img"); 
+                            billede.src = dekleration.billede; 
+                    
+                            billede.style.marginTop = "1rem"; 
+                            billede.style.display = "block"; 
+                            billede.style.width = "100%";
+                            billede.style.maxWidth = "870px";
+                    
+                            punkt.appendChild(billede); 
+                            button.innerText = `Skjul ${dekleration.dek} eksempel`;
+                        } else {
+                            punkt.removeChild(billede);
+                            billede = null; 
+                            button.innerText = `vis ${dekleration.dek} eksempel`;
+                        }
+                    });
+                    punkt.appendChild(button);
+                }
+                 
                 unorderedList.appendChild(punkt); 
             });
             
             section.appendChild(unorderedList); 
         };
 
-        // Hvis der er et billede
+        // Hvis note indeholder et billede
         if (note.billede) {
             const button = document.createElement("button");
             button.innerText = "Vis udvidet eksempel";
