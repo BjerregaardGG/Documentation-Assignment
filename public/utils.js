@@ -1,4 +1,3 @@
-
 // lektioner 
 const lektioner = [
     { titel: "1. Introduction" , link: "lektion_1.html" },
