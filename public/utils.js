@@ -132,7 +132,7 @@ export function addNotesToHTML(noter, divClass = ".notes"){
                 // hvis deklerationer har et billede, så tilføj funktionalitet
                 if (dekleration.billede) {
                     const button = document.createElement("button");
-                    button.innerText = `vis ${dekleration.dek} eksempel`;
+                    button.innerText = `${dekleration.dek} eksempel`;
                     button.className = "vis-billede-knap";
 
                     let billede = null; 

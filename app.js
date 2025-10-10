@@ -20,6 +20,9 @@ app.get("/lektion_3.html", (req, res) => {
     res.sendFile(path.resolve("public/lektion_3/lektion_3.html"));
 });
 
+app.get("/lektion_4.html", (req, res) => {
+    res.sendFile(path.resolve("public/lektion_4/lektion_4.html"));
+});
 
 const PORT = 8080; 
 app.listen(PORT, () => {

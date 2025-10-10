@@ -1,0 +1,19 @@
+export const noter = [
+    { titel: "CRUDable REST API", deklerationer: [
+        { dek: "Create ➡️ POST", billede: "lektion_4/images/post.png", beskrivelse: `Vi anvender os af POST, når vi gerne vil oprette data.`}, 
+        { dek: "Read ➡️ GET", billede: "lektion_4/images/get.png", beskrivelse: `Vi anvender os af GET, når vi gerne vil hente data.`},
+        { dek: "Update ➡️ PUT/PATCH", billede: "lektion_4/images/put_patch.png", beskrivelse: `Vi anvender os af PUT, når vi gerne vil ændre hele datastrukturen og vi anvender os af PATCH, når vi gerne vil ændre et element af dataen.`},
+        { dek: "Delete ➡️ DELETE", billede: "lektion_4/images/delete.png", beskrivelse: `Vi anvender os af DELETE, når vi gerne vil slette data.`}],
+        beskrivelse: `Når det kommer til CRUD REST API, så står CRUD for: create, read, update og delete og REST for 'REpresentational State Transfer'. REST kan vi se som værende principper for softwarens arkitektur i et API. Se eventuelt: '1. Introduction, REST API Design' for hvordan vi designer REST API'er. Når det kommer til konventioner, så vil vi gerne sikre os at vi har ensartede ruter. Vi skriver ikke i vores endpoints, hvorvidt det er en post eller get, da det bliver defineret ud fra den HTTP metode vi kalder på vores app. Vi vil altid sikre os at vi sender JSON og ikke strings, og på samme måde vil vi også altid gerne sikre os at vi kan konvertere den JSON vi modtager fra klienten, hvilket vi gør gennem: 'app.use(express.json())'. Vi navngiver vores ressoucer/models i flertal: "/api/greek_gods" og sikrer os at disse ressourcer kan tilgås gennem id, som vi kender det fra relationelle databaser. Så når det kommer til CRUD REST API, så anvender vi det til at håndtere HTTP forespørgsler, hvor hvert et step i CRUD svarer til et HTTP-verb:` },
+    { titel: "Date", deklerationer: [
+        { dek: "1. Simple date metoder", billede: "lektion_4/images/simple_dates.png", beskrivelse: "" },
+        { dek: "2. Date med måneder", billede: "lektion_4/images/date_months.png", beskrivelse: "" },
+        { dek: "3. Tidsforskellen mellem to dates", billede: "lektion_4/images/time_b_two_dates.png", beskrivelse: "" },
+        { dek: "4. Beregning af alder ud fra fødselsdag", billede: "lektion_4/images/føs.png", beskrivelse: "" }], 
+        beskrivelse: "JS Date er et objekt i JavaScript, der repræsenterer milisekunder siden midnat fra 1. januar 1970 i UTC. Dato objektet har en række metoder tilknyttet, hvilket gør det muligt for os at arbejde med datoer og tidspunkter. Forneden er en række eksempler på hvordan vi kan anvende dates:"},
+    { titel: "Fetch Requests", deklerationer: [
+        { dek: "Fetch uden Async Await", billede: "", beskrivelse: "" }, 
+        { dek: "Fetch med Async Await", billede: "", beskrivelse: "" },
+        { dek: "Response objektet", billede: "", beskrivelse: "" }], 
+        beskrivelse: "Når vi foretager et fetch, så kalder vi en indbygget JS funktion. Et fetch er en HTTP forespørgsel til en server, som vi gerne vil hente eller sende ressourcer til. Når vi fetcher, så returnerer funktionen et promise som enten kan blive resolved eller rejected, alt efter om vores fetch lykkedes eller ikke. Denne fetch operation kan udføres synkront eller asynkront, men da det generelt kan tage tid at fetche data, så vil vi gerne sikre os anvende asynkron kode, for at sikre os at vi ikke blokerer programmet. Dette kan man gøre på følgende måder:  "}
+]
