@@ -99,13 +99,26 @@ export function addNotesToHTML(noter, divClass = ".notes"){
         beskrivelse.innerText = note.beskrivelse; 
         section.appendChild(beskrivelse); 
 
-        // hvis der er datatyper, så lav en liste. 
+        // hvis der er datatyper eller tags, så lav en liste. 
         if (note.dataTyper) {
             const unorderedList = document.createElement("ul"); 
 
             note.dataTyper.forEach(datatype => {
                 const punkt = document.createElement("li"); 
                 punkt.innerText = datatype;
+
+                unorderedList.appendChild(punkt);
+            });
+
+            section.appendChild(unorderedList);
+        };
+
+        if (note.tags) {
+            const unorderedList = document.createElement("ul"); 
+
+            note.tags.forEach(tags => {
+                const punkt = document.createElement("li"); 
+                punkt.innerText = tags;
 
                 unorderedList.appendChild(punkt);
             });
