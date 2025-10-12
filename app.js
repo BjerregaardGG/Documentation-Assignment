@@ -32,6 +32,10 @@ app.get("/lektion_6.html", (req, res) => {
     res.sendFile(path.resolve("public/lektion_6/lektion_6.html"));
 });
 
+app.get("/lektion_7.html", (req, res) => {
+    res.sendFile(path.resolve("public/lektion_7/lektion_7.html"));
+});
+
 const PORT = 8080; 
 app.listen(PORT, () => {
     console.log("Server is running on port: ", PORT);

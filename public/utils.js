@@ -6,6 +6,7 @@ const lektioner = [
     { titel: "4. HTML & Time" , link: "lektion_4.html" },
     { titel: "5. Import & Export" , link: "lektion_5.html" },
     { titel: "6. Client vs Server + Env Variables" , link: "lektion_6.html" },
+    { titel: "7. Server-side Rendering" , link: "lektion_7.html" }
 ]
 
 // funktion til at tilføje header til HTML 
