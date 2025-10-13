@@ -1,21 +1,17 @@
 // templateEngine.js
 import fs from 'fs';
-
 import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export function readPage(file) {
-    return fs.readFileSync(path.join(__dirname, file));
+    const filePath = path.join(process.cwd(), file);
+    return fs.readFileSync(filePath, 'utf8'); 
 }
 
 // komponenter
-const header = readPage("../components/header.html");
-const footer = readPage("../components/footer.html");
-const lektionTemplate = readPage("../lektioner/lektion-template.html");
-const forsideTemplate = readPage("../forside/forside-template.html")
+const header = readPage("components/header.html");
+const footer = readPage("components/footer.html");
+const lektionTemplate = readPage("lektioner/lektion-template.html");
+const forsideTemplate = readPage("forside/forside-template.html");
 
 // forside script 
 const scriptForside = `<script type="module" src="/forside/index.js"></script>
