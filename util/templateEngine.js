@@ -12,10 +12,10 @@ export function readPage(path) {
 }
 
 // komponenter
-const header = readPage("./public/components/header.html");
-const footer = readPage("./public/components/footer.html");
-const lektionTemplate = readPage("./public/lektioner/lektion-template.html");
-const forsideTemplate = readPage("./public/forside/forside-template.html")
+const header = readPage("../components/header.html");
+const footer = readPage("../components/footer.html");
+const lektionTemplate = readPage("../lektioner/lektion-template.html");
+const forsideTemplate = readPage("../forside/forside-template.html")
 
 // forside script 
 const scriptForside = `<script type="module" src="/forside/index.js"></script>
