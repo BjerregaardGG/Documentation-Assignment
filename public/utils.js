@@ -143,6 +143,13 @@ export function addNotesToHTML(noter, divClass = ".notes"){
                 punkt.appendChild(titel);
                 punkt.appendChild(beskrivelse);
 
+                if (dekleration.beskrivelse2) {
+                const beskrivelse2 = document.createElement("p");
+                beskrivelse2.innerText = dekleration.beskrivelse2;
+                punkt.appendChild(beskrivelse2);
+
+                }
+
                 // hvis deklerationer har et billede, så tilføj funktionalitet
                 if (dekleration.billede) {
                     const button = document.createElement("button");
