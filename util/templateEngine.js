@@ -1,6 +1,16 @@
 // templateEngine.js
 import fs from 'fs';
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export function readPage(path) {
+    return fs.readFileSync(path.join(__dirname, path));
+}
+
 // komponenter
 const header = readPage("./public/components/header.html");
 const footer = readPage("./public/components/footer.html");
@@ -31,6 +41,3 @@ export function constructLektion(lektionId, options = {}) {
         + footer.replace('$$JS_LINKS$$', scriptLektioner);
 }
 
-export function readPage(path) {
-    return fs.readFileSync(path).toString();
-}
