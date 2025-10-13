@@ -1,15 +1,15 @@
 // lektioner 
-const lektioner = [
-    { titel: "1. Introduction" , link: "lektion_1.html" },
-    { titel: "2. First server" , link: "lektion_2.html" },
-    { titel: "3. Loop Methods" , link: "lektion_3.html" },
-    { titel: "4. HTML & Time" , link: "lektion_4.html" },
-    { titel: "5. Import & Export" , link: "lektion_5.html" },
-    { titel: "6. Client vs Server + Env Variables" , link: "lektion_6.html" },
-    { titel: "7. Server-side Rendering" , link: "lektion_7.html" }
+export const lektioner = [
+    { titel: "1. Introduction" , link: "lektion1", dato: "28. august 2025" },
+    { titel: "2. First server" , link: "lektion2", dato: "4. september 2025" },
+    { titel: "3. Loop Methods" , link: "lektion3", dato: "11. september 2025" },
+    { titel: "4. HTML & Time" , link: "lektion4", dato: "18. september 2025" },
+    { titel: "5. Import & Export" , link: "lektion5", dato: "25. september 2025" },
+    { titel: "6. Client vs Server + Env Variables" , link: "lektion6", dato: "02. october 2025" },
+    { titel: "7. Server-side Rendering" , link: "lektion7", dato: "09. october 2025" }
 ]
 
-// funktion til at tilføje header til HTML 
+// funktion til at tilføje header til lektioner 
 export function addHeaderToHTML(){
     const header = document.querySelector(".header_lektion");
 

@@ -4,37 +4,41 @@ const app = express();
 
 app.use(express.static("public")); 
 
+// ssr
+import { lektion1Page, lektion2Page, lektion3Page, lektion4Page, lektion5Page, lektion6Page, lektion7Page } from "./util/pagesUtil.js";
+import { forside } from "./util/pagesUtil.js";
+
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve("public/forside/index.html"));
-});
+    res.send(forside);
+})
 
-app.get("/lektion_1.html", (req, res) => {
-    res.sendFile(path.resolve("public/lektioner/lektion_1/lektion_1.html"));
-});
+app.get("/lektion1", (req, res) => {
+    res.send(lektion1Page);
+})
 
-app.get("/lektion_2.html", (req, res) => {
-    res.sendFile(path.resolve("public/lektioner/lektion_2/lektion_2.html"));
-});
+app.get("/lektion2", (req, res) => {
+    res.send(lektion2Page);
+})
 
-app.get("/lektion_3.html", (req, res) => {
-    res.sendFile(path.resolve("public/lektioner/lektion_3/lektion_3.html"));
-});
+app.get("/lektion3", (req, res) => {
+    res.send(lektion3Page);
+})
 
-app.get("/lektion_4.html", (req, res) => {
-    res.sendFile(path.resolve("public/lektioner/lektion_4/lektion_4.html"));
-});
+app.get("/lektion4", (req, res) => {
+    res.send(lektion4Page);
+})
 
-app.get("/lektion_5.html", (req, res) => {
-    res.sendFile(path.resolve("public/lektioner/lektion_5/lektion_5.html"));
-});
+app.get("/lektion5", (req, res) => {
+    res.send(lektion5Page);
+})
 
-app.get("/lektion_6.html", (req, res) => {
-    res.sendFile(path.resolve("public/lektioner/lektion_6/lektion_6.html"));
-});
+app.get("/lektion6", (req, res) => {
+    res.send(lektion6Page);
+})
 
-app.get("/lektion_7.html", (req, res) => {
-    res.sendFile(path.resolve("public/lektioner/lektion_7/lektion_7.html"));
-});
+app.get("/lektion7", (req, res) => {
+    res.send(lektion7Page);
+})
 
 const PORT = 8080; 
 app.listen(PORT, () => {
