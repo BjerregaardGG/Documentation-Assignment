@@ -1,4 +1,4 @@
-import { addHeaderToHTML, addFooterToHTML, addNotesToHTML } from "../utils.js";
+import { addHeaderToHTML, addFooterToHTML, addNotesToHTML } from "../../assets/js/utils.js";
 import { noter } from "./noter.js";
 
 addHeaderToHTML();
