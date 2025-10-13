@@ -10,54 +10,63 @@ body {
   margin: 0;
   font-weight: 400;
   letter-spacing: 0.3px;
-  }
-  main {
+}
+ 
+main {
   flex: 1;
   margin-top: 2rem;
-  }
-  .container {
+}
+  
+.container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  }
-  /* === HEADER === */
-  header {
+}
+
+/* HEADER */
+header {
   background-color: #1f1f1f;
   padding: 1.5rem 0;
   text-align: center;
-  }
-  header h1 {
+}
+
+header h1 {
   font-weight: 700;
   font-size: 2.2rem;
   color: #e09f3e;
   margin-bottom: 0.5rem;
   letter-spacing: -0.5px;
-  }
-  nav ul {
+}
+  
+nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  }
-  nav ul li {
+}
+  
+nav ul li {
   margin: 0 15px;
   position: relative;
-  }
-  nav ul li a {
+}
+  
+nav ul li a {
   font-weight: 500;
   text-decoration: none;
   color: #f4f4f4;
   cursor: pointer;
   transition: color 0.2s ease;
   letter-spacing: 0.3px;
-  }
-  nav ul li a:hover {
+}
+  
+nav ul li a:hover {
   color: #e09f3e;
-  }
-  /* Drop-down menu */
-  .dropdown_menu {
+}
+  
+/* DROP DOWN */
+.dropdown_menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -69,56 +78,63 @@ body {
   padding: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
-  .dropdown_menu li a {
+}
+  
+.dropdown_menu li a {
   display: block;
   padding: 0.7rem 2rem;
   font-weight: 400;
   white-space: nowrap;
   transition: all 0.2s ease;
-  }
-  .dropdown_menu li a:hover {
+}
+  
+.dropdown_menu li a:hover {
   background-color: #e09f3e;
   color: #1f1f1f;
-  }
-  .dropdown:hover .dropdown_menu {
+}
+  
+.dropdown:hover .dropdown_menu {
   display: block;
-  }
-  /* === NOTER OG BILLEDER === */
-  .notes {
+}
+  
+/* NOTES */
+.notes {
   width: 80%;
   max-width: 900px;
   margin: 0 auto;
-  }
-  /* Note sektion */
-  .note {
-  margin-bottom: 2.5rem;
-  }
-  .note h2 {
+}
+    
+.note {
+  margin-bottom: 2.5rem;  
+}
+  
+.note h2 {
   color: #e09f3e;
   margin-bottom: 0.8rem;
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: -0.3px;
-  }
-  .note p {
+}
+  
+.note p {
   margin-bottom: 0.8rem;
   color: #d4d4d4;
   font-size: 1.05rem;
   line-height: 1.8;
   font-weight: 400;
-  }
-  .note ul {
+}
+  
+.note ul {
     list-style: none;      
     padding-left: 1rem;  
-  }
+}
   
-  .note ul li {
+.note ul li {
     position: relative;     
     padding-left: 2rem;   
-  }
+}
   
-  .note ul li::before {
+.note ul li::before {
     font-size: 1.2rem;
     content: "‣";           
     color: #e09f3e;
@@ -126,16 +142,19 @@ body {
     left: 0;                
     top: 0;
     line-height: 1.7;       
-  }
-  .note h4 {
+}
+
+.note h4 {
   color: #f0b04e;
   margin: 1rem 0 0.5rem 0;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.2px;
-  }
-  /* Knap til at vise billede */
-  .vis-billede-knap {
+
+}
+  
+/* Knap til at vise billede */
+.vis-billede-knap {
   background-color: transparent;
   border: 1.5px solid #e09f3e;
   color: #e09f3e;
@@ -148,24 +167,27 @@ body {
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: all 0.2s ease;
-  }
-  .vis-billede-knap:hover {
+}
+  
+.vis-billede-knap:hover {
   background-color: #e09f3e;
   color: #121212;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(224, 159, 62, 0.3);
-  }
-  /* Billeder under noten */
-  .note img {
+}
+  
+/* Billeder under noten */
+.note img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin-top: 1rem;
   display: block;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-  }
-  /* Responsivt layout */
-  @media (max-width: 900px) {
+}
+  
+/* Responsivt layout */
+@media (max-width: 900px) {
   main {
   flex-direction: column;
    }
