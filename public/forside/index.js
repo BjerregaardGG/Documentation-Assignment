@@ -9,9 +9,9 @@ if (header) {
     containerDiv.className = "container";
 
     // Titel
-    const h1 = document.createElement("h1");
-    h1.innerText = "Node.js Documentation";
-    containerDiv.appendChild(h1);
+    const titel = document.createElement("h1");
+    titel.innerText = "Node.js Documentation";
+    containerDiv.appendChild(titel);
 
     // Navigation
     const nav = document.createElement("nav");
@@ -59,14 +59,14 @@ const heroSection = document.querySelector(".hero");
 const heroContainer = document.createElement("div");
 heroContainer.className = "container";
 
-const h2 = document.createElement("h2");
-h2.innerText = "Mandatory Assignment";
+const titel = document.createElement("h2");
+titel.innerText = "Mandatory Assignment";
 
-const p = document.createElement("p");
-p.innerText = "På denne side finder du et noteskatalog for valgfaget Node.js fra 4. semester på Erhvervsakademiet. Hver side er navngivet efter den respektive undervisningsgang, hvor der hertil findes uddybende noter for hver enkelt fags læringsmål.";
+const beskrivelse = document.createElement("p");
+beskrivelse.innerText = "På denne side finder du et noteskatalog for valgfaget Node.js fra 4. semester på Erhvervsakademiet. Hver side er navngivet efter den respektive undervisningsgang, hvor der hertil findes uddybende noter for hver enkelt fags læringsmål.";
 
-heroContainer.appendChild(h2);
-heroContainer.appendChild(p);
+heroContainer.appendChild(titel);
+heroContainer.appendChild(beskrivelse);
 heroSection.appendChild(heroContainer);
 
 // noter og søgefelt 
@@ -83,7 +83,7 @@ searchBox.className = "search-box";
 const input = document.createElement("input");
 input.type = "text";
 input.id = "searchInput";
-input.placeholder = "Søg blandt alle lektioner..";
+input.placeholder = "Søg blandt begreber";
 
 const button = document.createElement("button");
 button.className = "btn";
@@ -102,9 +102,15 @@ lektioner.forEach(lektion => {
     const article = document.createElement("article");
     article.className = "note";
 
+    // Titel
     const titel = document.createElement("h2");
     titel.innerText = lektion.titel;
     article.appendChild(titel);
+
+    // Besktivelse
+    const beskrivelse = document.createElement("p");
+    beskrivelse.innerText = lektion.beskrivelse;
+    article.appendChild(beskrivelse);
 
     // Dato
     const dato = document.createElement("p");

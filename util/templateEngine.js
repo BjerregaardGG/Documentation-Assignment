@@ -8,8 +8,8 @@ export function readPage(file) {
 }
 
 // komponenter
-const header = readPage("components/header.html");
-const footer = readPage("components/footer.html");
+const header = readPage("public/components/header.html");
+const footer = readPage("public/components/footer.html");
 const lektionTemplate = readPage("public/lektioner/lektion-template.html");
 const forsideTemplate = readPage("public/forside/forside-template.html");
 

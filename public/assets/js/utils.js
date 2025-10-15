@@ -1,12 +1,12 @@
 // lektioner 
 export const lektioner = [
-    { titel: "1. Introduction" , link: "lektion1", dato: "28. august 2025" },
-    { titel: "2. First server" , link: "lektion2", dato: "4. september 2025" },
-    { titel: "3. Loop Methods" , link: "lektion3", dato: "11. september 2025" },
-    { titel: "4. HTML & Time" , link: "lektion4", dato: "18. september 2025" },
-    { titel: "5. Import & Export" , link: "lektion5", dato: "25. september 2025" },
-    { titel: "6. Client vs Server + Env Variables" , link: "lektion6", dato: "02. october 2025" },
-    { titel: "7. Server-side Rendering" , link: "lektion7", dato: "09. october 2025" }
+    { titel: "1. Introduction" , link: "lektion1", dato: "28. august 2025", beskrivelse: "Introduktion til kursuset. Node.js, variabler, type coercion, git i terminalen, datatyper, REST API og kodekonventioner." },
+    { titel: "2. First server" , link: "lektion2", dato: "4. september 2025", beskrivelse: "Scoping i JS, funktioner (callback funktioner), package managers (NPM), package.json, Express, GET requests, node_modules." },
+    { titel: "3. Loop Methods" , link: "lektion3", dato: "11. september 2025", beskrivelse: "Nodemon, loop metoder (functional manner), URL terminologi, POST requests (parsing body)." },
+    { titel: "4. HTML & Time" , link: "lektion4", dato: "18. september 2025", beskrivelse: "CRUDable REST API, arbejde med Date i JS, fetch requests (med og uden async/await)."},
+    { titel: "5. Import & Export" , link: "lektion5", dato: "25. september 2025", beskrivelse: "HTML import/export, Node.js import/export, static files, redirection, client- og server-side redirection." },
+    { titel: "6. Client vs Server" , link: "lektion6", dato: "02. october 2025", beskrivelse: "NPM scripts, miljøvariabler, fetching i klient vs backend, semantisk HTML, client vs server files, styling af footer, strukturering af frontend" },
+    { titel: "7. Server-side Rendering" , link: "lektion7", dato: "09. october 2025", beskrivelse: "Kode placering og dets påvirkning af memory og efficiency, SSR vs CSR, strkturering af kode og håndtering af filer der er for lange." }
 ]
 
 // funktion til at tilføje header til lektioner 

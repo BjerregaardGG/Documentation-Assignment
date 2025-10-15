@@ -190,17 +190,25 @@ nav ul li a:hover {
 @media (max-width: 900px) {
   main {
   flex-direction: column;
-   }
+  }
   .notes {
   width: 90%;
-   }
+  }
   header h1 {
   font-size: 1.8rem;
-   }
+  }
   .note h3 {
   font-size: 1.3rem;
-   }
+  }
   .note p, .note ul li {
   font-size: 1rem;
-   }
   }
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 60px;           
+}
