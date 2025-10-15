@@ -114,8 +114,10 @@ lektioner.forEach(lektion => {
 
     // Dato
     const dato = document.createElement("p");
+    dato.style.color = "#e09f3e";
     dato.innerText = "Dato: ";
     const datoStamp = document.createElement("time");
+    datoStamp.style.color = "#e09f3e";
     datoStamp.innerText = lektion.dato;
     datoStamp.setAttribute("datetime", lektion.dato);
     dato.appendChild(datoStamp);
