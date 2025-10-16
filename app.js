@@ -1,5 +1,4 @@
 import express from "express";  
-import serverless from "serverless-http";
 const app = express(); 
 
 app.use(express.static("public")); 
@@ -40,9 +39,8 @@ app.get("/lektion7", (req, res) => {
     res.send(lektion7Page);
 })
 
-const PORT = 8080; 
+const PORT = process.env.PORT || 8010; 
 app.listen(PORT, () => {
     console.log("Server is running on port: ", PORT);
 });
 
-export default serverless(app);

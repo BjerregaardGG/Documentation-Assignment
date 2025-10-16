@@ -223,11 +223,8 @@ export function addNotesToHTML(noter, divClass = ".notes"){
                     button.innerText = "Vis udvidet eksempel";
                 }
             });
-  
             section.appendChild(button);
         };
-
         notesDiv.appendChild(section);
     });
-
 };

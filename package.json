@@ -4,8 +4,8 @@
   "description": "A documentation website of what I've learnt so far in Node.JS",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "cross-env PORT=8080 nodemon app.js"
   },
   "keywords": [
     "Node.js",
@@ -19,7 +19,10 @@
   "type": "module",
   "dependencies": {
     "express": "^5.1.0",
-    "nodemon": "^3.1.10",
     "serverless-http": "^4.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.1.10"
   }
 }
